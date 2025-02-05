@@ -1,0 +1,6 @@
+git init
+git add .
+git commit -m "Primeira versão do sistema"
+git branch -M main
+git remote add origin https://github.com/AJPadilha1983/sistema_chamados.git
+git push -u origin main
