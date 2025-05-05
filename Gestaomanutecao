@@ -15,8 +15,9 @@ import {
 } from "lucide-react";
 import * as XLSX from "xlsx";
 
-const supabaseUrl = "https://fbckoodcnhlbuqmpuona.supabase.co";
-const supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZiY2tvb2RjbmhsYnVxbXB1b25hIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDY0NzMwOTEsImV4cCI6MjA2MjA0OTA5MX0.z_Uguza2GwHiYO34sgvm2ScE1e1XmXj-6O1L6Qbcv6M";
+// ⚠️ Variáveis de ambiente agora são usadas
+const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
+const supabaseKey = import.meta.env.VITE_SUPABASE_KEY;
 const supabase = createClient(supabaseUrl, supabaseKey);
 
 export default function App() {
@@ -41,7 +42,6 @@ export default function App() {
 
   const pages = {
     dashboard: <div className="p-4">Bem-vindo ao Sistema de Gestão da Manutenção</div>,
-    // ...demais páginas iguais...
     usuarios: (
       // ...conteúdo igual...
     ),
